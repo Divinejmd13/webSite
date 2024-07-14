@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: Garamond;
+    src: url("itc-garamond-cond.static.woff2");
+}
+
+@font-face {
+    font-family: Alpina;
+    src: url("gt-alpina-typewriter-medium.static.woff2");
+}
+
+@font-face {
+    font-family: Alpina-Light;
+    src: url("gt-alpina-typewriter-light.static.woff2");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.heading-underline::after {
+    @apply content-[''] absolute left-0 bottom-3 w-full h-[2px] bg-darkGrey;
+}
+
+.slider-item {
+    @apply basis-auto h-full flex-shrink-0 flex-grow-0 transition-transform;
+}
+
+.quantity-button {
+    @apply transition-colors
+}
+
+.slider-item>img {
+    @apply object-cover h-full lg:w-[50vw] w-[100vw];
+}
+
+.slider-button {
+    @apply cursor-pointer rounded-full border-black border-2 overflow-hidden flex justify-center items-center transition-colors;
+}
+
+.slider-button>img {
+    @apply object-cover w-[60px] h-[60px];
+}
+
+.logo {
+    @apply absolute lg:top-4 lg:left-10;
+}
+
+.accordion-button {
+    @apply transition-colors cursor-pointer
+}
+
+.checkbox {
+    @apply transition-colors
+}
+
+.slide-button-small {
+    @apply cursor-pointer;
+}
+
+.subscribe-button {
+    @apply transition-transform
+}
+
+.button-background {
+    background-image: url("https://www.publicdomainpictures.net/pictures/20000/velka/checkerboard-pattern.jpg");
+}
+
+.accordion-button-selected {
+    @apply bg-darkGrey text-lightBackground
+}
